@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import QuickAccessBox from '../QuickAccessBox/QuickAccessBox';
 import Chevron from '../Svg/Chevron';
 
 import './LatestFiles.scss';
 const LatestFiles = () => {
-  const [showQA, setShowQA] = useState(true);
+  const [showQA, setShowQA] = useState();
+  const handleQA = () => {
+    setShowQA(!showQA);
+    localStorage.setItem('qaState', !showQA);
+  };
+  useEffect(() => {
+    const data = localStorage.getItem('qaState');
+    if (data) {
+      setShowQA(JSON.parse(data));
+    }
+  }, []);
+
   return (
     <div
       className={
@@ -17,7 +28,7 @@ const LatestFiles = () => {
           className={`chevron chevron--${
             showQA === true ? 'up' : 'down'
           } cursor`}
-          onClick={() => setShowQA(!showQA)}
+          onClick={handleQA}
         >
           <Chevron height='34' width='34' color='#f8f8ff' />
         </div>
