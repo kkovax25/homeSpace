@@ -1,12 +1,20 @@
-## Current phase of the project
+# Current phase of the project
 
-Google drive like file storage place:
+## Google drive like file storage place:
+
 <img src="https://i.imgur.com/dBWcFFu.png"
      alt="CurrentPhase" />
 
-Manage devices for your smarthome from here:
+## Manage devices for your smarthome from here:
+
 <img src="https://i.imgur.com/qMlOSHq.png"
      alt="CurrentPhase" />
+
+## Coming soon:
+
+- [ ] Spotify integration,
+- [ ] Track your subscriptions,
+- [ ] Settings to manage rooms, floors and devices.
 
 # Getting Started with Create React App
 
