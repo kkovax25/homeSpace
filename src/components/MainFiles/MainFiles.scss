@@ -1,0 +1,57 @@
+@import '../../sass/colors/colors';
+@import '../../sass/variables/variables';
+@import '../../sass/mixins/mixins';
+
+.table {
+  //   background-color: orangered;
+  margin-top: $space-medium;
+  height: 50rem;
+  &__header,
+  &__row {
+    @include flex(center, space-between, row);
+    &--title {
+      color: $color-primary-white;
+      font-size: $font-size-medium;
+    }
+  }
+  &__row {
+    transition: all $transition-medium;
+    &:hover {
+      background-color: $color-grey-light;
+      cursor: pointer;
+    }
+  }
+  &__cell {
+    border-bottom: 0.1rem solid $color-grey-light;
+
+    width: 100%;
+    @include flex(center, flex-start, row);
+    &--body {
+      height: 5rem;
+
+      @include flex(center, flex-start, row);
+    }
+    &--icon {
+      height: 3rem;
+      width: 3rem;
+      margin-right: $space-small;
+    }
+  }
+
+  &__header {
+    &--title {
+      margin-bottom: $space-small;
+      color: lighten($color: $color-primary-white, $amount: 5);
+      opacity: 0.5;
+      transition: all $transition-medium;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  &__body {
+    &--title {
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import '../../sass/colors/colors';
+@import '../../sass/variables/variables';
+
+.docBox {
+  perspective: 1500rem;
+  -moz-perspective: 1500rem;
+  position: relative;
+  height: 16rem;
+  width: 14.5rem;
+  &__side {
+    height: 16rem;
+    width: 14.5rem;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    transition: all $transition-slow;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    &--front {
+      background-color: palegoldenrod;
+    }
+    &--back {
+      transform: rotateY(180deg);
+      background-color: pink !important;
+    }
+  }
+  &__pic {
+    height: 3rem;
+    width: 3rem;
+    margin: $space-medium;
+  }
+  &__cardDesc {
+    color: $color-primary-black;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+
+    &--back {
+      padding: 0 1rem;
+    }
+    &--title {
+      font-weight: 600;
+      margin-bottom: $space-small;
+    }
+    &--info {
+      font-weight: 600;
+    }
+  }
+  .docBoxInnerFront {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    &__frontDesc {
+      margin: $space-medium;
+    }
+  }
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+  &--word {
+    background-image: linear-gradient(to right top, #ccdeff, #f0f6ff);
+  }
+  &--excel {
+    background-image: linear-gradient(to right top, #b3e2be, #e9fee8);
+  }
+  &--ppt {
+    background-image: linear-gradient(to right top, #fff0cc, #fffaf0);
+  }
+  &--other {
+    background-image: linear-gradient(to right top, #d8c9ff, #f0eaff);
+  }
+}

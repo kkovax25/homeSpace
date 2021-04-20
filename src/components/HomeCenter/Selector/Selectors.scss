@@ -1,0 +1,83 @@
+@import '../../../sass/colors/colors';
+@import '../../../sass/variables/variables';
+@import '../../../sass//mixins/mixins';
+
+.selectors {
+  margin-top: $space-large;
+
+  .floorSelector {
+    transition: all $transition-fast;
+
+    &__title {
+      color: $color-primary-white;
+      font-size: $font-size-large;
+    }
+    &__header {
+      margin-bottom: $space-small;
+      height: 4.5rem;
+      border-bottom: 0.1rem solid $color-grey-light;
+      @include flex(center, flex-start, row);
+    }
+    .floors {
+      @include flex(center, space-between, row);
+      .floor {
+        width: 100%;
+        height: 4rem;
+        margin: 0 1rem;
+        transition: $transition-slow;
+        @include flex(center, center, row);
+        border-radius: 0.5rem;
+        &:hover {
+          background-color: rgba($color: $color-grey-light, $alpha: 0.3);
+        }
+        &--active {
+          background-color: rgba($color: $color-grey-light, $alpha: 0.3);
+          font-weight: bold;
+        }
+        &--title {
+          color: $color-primary-white;
+          font-size: $font-size-medium;
+        }
+      }
+    }
+  }
+
+  .roomSelector {
+    margin-top: $space-medium;
+    transition: all $transition-fast;
+
+    &__title {
+      color: $color-primary-white;
+      font-size: $font-size-large;
+    }
+    &__header {
+      margin-bottom: $space-small;
+      height: 4.5rem;
+      border-bottom: 0.1rem solid $color-grey-light;
+      @include flex(center, flex-start, row);
+    }
+    .rooms {
+      @include flex(center, space-between, row);
+
+      .room {
+        width: 100%;
+        height: 4rem;
+        margin: 0 1rem;
+        transition: $transition-slow;
+        @include flex(center, center, row);
+        border-radius: 0.5rem;
+        &:hover {
+          background-color: rgba($color: $color-grey-light, $alpha: 0.3);
+        }
+        &--active {
+          background-color: rgba($color: $color-grey-light, $alpha: 0.3);
+          font-weight: bold;
+        }
+        &--title {
+          color: $color-primary-white;
+          font-size: $font-size-medium;
+        }
+      }
+    }
+  }
+}

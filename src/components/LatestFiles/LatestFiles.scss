@@ -1,0 +1,39 @@
+@import '../../sass/colors/colors';
+@import '../../sass/variables/variables';
+.latestFiles {
+  // border-bottom: 0.1rem solid $color-grey-light;
+  height: 32vh;
+  margin-top: $space-large;
+  transition: all $transition-fast;
+  &--hidden {
+    height: 10vh;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $space-small;
+
+    .chevron {
+      transition: all $transition-medium;
+      &--up {
+        transform: rotateX(180deg);
+        padding-top: $space-small;
+      }
+    }
+  }
+  &__title {
+    color: $color-primary-white;
+    font-size: $font-size-large;
+  }
+  .quickAccess {
+    display: flex;
+    justify-content: space-between;
+    transition: all $transition-medium;
+
+    &--hidden {
+      opacity: 0;
+    }
+  }
+}
