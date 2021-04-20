@@ -2,7 +2,7 @@ import React from 'react';
 import './CustomSwitch.scss';
 const CustomSwitch = ({ value, onChange }) => {
   return (
-    <label class='switch'>
+    <label className='switch'>
       <input
         type='checkbox'
         checked={value}

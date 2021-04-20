@@ -1,3 +1,13 @@
+## Current phase of the project
+
+Google drive like file storage place:
+<img src="https://i.imgur.com/dBWcFFu.png"
+     alt="CurrentPhase" />
+
+Manage devices for your smarthome from here:
+<img src="https://i.imgur.com/qMlOSHq.png"
+     alt="CurrentPhase" />
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
